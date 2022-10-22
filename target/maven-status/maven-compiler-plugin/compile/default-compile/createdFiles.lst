@@ -1,0 +1,6 @@
+config\Config.class
+PageObject\RegisterPage.class
+PageObject\ForgotPasswordPage.class
+PageObject\HomePageBurger.class
+PageObject\EnterPage.class
+PageObject\ProfilePage.class
