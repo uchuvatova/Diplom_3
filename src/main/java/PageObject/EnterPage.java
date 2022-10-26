@@ -8,13 +8,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class EnterPage {
 
     private WebDriver driver;
-    public final String url = "https://stellarburgers.nomoreparties.site/login";
+    public final String URL = "https://stellarburgers.nomoreparties.site/login";
     private By emailField = By.xpath("//fieldset[1]/div/div");
     private By inputEmailField = By.xpath("//input[@name='name']");
     private By passwordField = By.xpath("//fieldset[2]/div/div");
     private By inputPasswordField = By.xpath("//input[@name='Пароль']");
     private By enterButton = By.xpath("//button[text() = 'Войти']");
-    // локатор кнопки "Выход" в профайле
+
 
 
 
@@ -26,7 +26,7 @@ public class EnterPage {
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='Auth_login__3hAey']")));
     }
     public String getUrl() {
-        return url;
+        return URL;
     }
     public void clickEmailField() {
         driver.findElement(emailField).click();
@@ -43,14 +43,6 @@ public class EnterPage {
     }
     public void clickEnterButton() {
         driver.findElement(enterButton).click();
-    }
-
-
-    public void clearEmailField() {
-        driver.findElement(emailField).clear();
-    }
-    public void clearPasswordField() {
-        driver.findElement(passwordField).clear();
     }
 
 }
