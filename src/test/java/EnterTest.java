@@ -72,7 +72,7 @@ public class EnterTest {
         enterPage.clickEnterButton();
         HomePageBurger loginHomePage = new HomePageBurger(driver);
         loginHomePage.waitForLoadHomePage();
-        String getTextButton = driver.findElement(By.xpath("//button[@class = 'button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']")).getText();
+        String getTextButton = driver.findElement(loginHomePage.orderButton).getText();
         Assert.assertEquals("Оформить заказ", getTextButton);
 
     }
@@ -91,7 +91,7 @@ public class EnterTest {
         enterPage.clickEnterButton();
         HomePageBurger loginHomePage = new HomePageBurger(driver);
         loginHomePage.waitForLoadHomePage();
-        String getTextButton = driver.findElement(By.xpath("//button[@class = 'button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']")).getText();
+        String getTextButton = driver.findElement(loginHomePage.orderButton).getText();
         Assert.assertEquals("Оформить заказ", getTextButton);}
 
         @Test
@@ -111,7 +111,7 @@ public class EnterTest {
             enterPage.clickEnterButton();
             HomePageBurger loginHomePage = new HomePageBurger(driver);
             loginHomePage.waitForLoadHomePage();
-            String getTextButton = driver.findElement(By.xpath("//button[@class = 'button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']")).getText();
+            String getTextButton = driver.findElement(loginHomePage.orderButton).getText();
             Assert.assertEquals("Оформить заказ", getTextButton);
         }
 
@@ -132,7 +132,7 @@ public class EnterTest {
         enterPage.clickEnterButton();
         HomePageBurger loginHomePage = new HomePageBurger(driver);
         loginHomePage.waitForLoadHomePage();
-        String getTextButton = driver.findElement(By.xpath("//button[@class = 'button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']")).getText();
+        String getTextButton = driver.findElement(loginHomePage.orderButton).getText();
         Assert.assertEquals("Оформить заказ", getTextButton);
     }
 

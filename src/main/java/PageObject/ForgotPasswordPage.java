@@ -9,7 +9,7 @@ public class ForgotPasswordPage {
         private WebDriver driver;
         // Ссылка "Войти"
         private By enterLink = By.xpath("//a[text()='Войти']");
-    private String url = "https://stellarburgers.nomoreparties.site/forgot-password";
+    private String URL = "https://stellarburgers.nomoreparties.site/forgot-password";
         public ForgotPasswordPage (WebDriver driver) {
             this.driver = driver;
         }
@@ -18,7 +18,7 @@ public class ForgotPasswordPage {
                     .until(ExpectedConditions.visibilityOfElementLocated(By.className("Auth_login__3hAey")));
         }
     public String getUrl() {
-        return url;
+        return URL;
     }
         public void clickEnterLink() {
             driver.findElement(enterLink).click();

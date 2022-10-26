@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProfilePage {
     private WebDriver driver;
-    public final String url = "https://stellarburgers.nomoreparties.site/account/profile";
+    public final String URL = "https://stellarburgers.nomoreparties.site/account/profile";
     public final By exitButton = By.xpath("//button[text()='Выход']");
     public final By linkConstructor = By.xpath(".//p[text()='Конструктор']");
     public ProfilePage(WebDriver driver) {
@@ -18,7 +18,7 @@ public class ProfilePage {
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='Account_account__vgk_w']")));
     }
     public String getUrl() {
-        return url;
+        return URL;
     }
     public void clickExitButton() {
         driver.findElement(exitButton).click();

@@ -55,7 +55,7 @@ public class ConstructTest {
         HomePageBurger objHomePage = new HomePageBurger(driver); // создаю объект класса главной страницы приложения
         objHomePage.waitForLoadHomePage();
         objHomePage.clickSauceLink();
-        WebElement element = driver.findElement(By.xpath("//h2[text() = 'Соусы']"));
+        WebElement element = driver.findElement(objHomePage.sauceHeader);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
         assertEquals("Соусы", objHomePage.getTextActiveLink());
     }
@@ -65,7 +65,7 @@ public class ConstructTest {
         HomePageBurger objHomePage = new HomePageBurger(driver); // создаю объект класса главной страницы приложения
         objHomePage.waitForLoadHomePage();
         objHomePage.clickFillLink();
-        WebElement element = driver.findElement(By.xpath("//h2[text() = 'Начинки']"));
+        WebElement element = driver.findElement(objHomePage.fillHeader);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
         assertEquals("Начинки", objHomePage.getTextActiveLink());
     }
@@ -76,7 +76,7 @@ public class ConstructTest {
         objHomePage.waitForLoadHomePage();
         objHomePage.clickFillLink();
         objHomePage.clickBunLink();
-        WebElement element = driver.findElement(By.xpath("//h2[text() = 'Булки']"));
+        WebElement element = driver.findElement(objHomePage.bunHeader);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
         assertEquals("Булки", objHomePage.getTextActiveLink());
     }

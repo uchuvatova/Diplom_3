@@ -11,12 +11,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
@@ -81,7 +79,7 @@ public class FromProfileTest {
         profilePage.waitForLoadProfilePage();
         profilePage.clickConstructor();
         loginHomePage.waitForLoadHomePage();
-        String text = driver.findElement(By.xpath("//div/main/section[@class = 'BurgerIngredients_ingredients__1N8v2']")).getText();
+        String text = driver.findElement(loginHomePage.createBurgerSection).getText();
        Assert.assertTrue(text.contains("Соберите бургер"));
     }
     @Test
@@ -104,7 +102,7 @@ public class FromProfileTest {
         profilePage.waitForLoadProfilePage();
         profilePage.clickExitButton();
         enterPage.waitForLoadEnterPage();
-        String text = driver.findElement(By.xpath("//h2")).getText();
+        String text = driver.findElement(enterPage.enterHeader).getText();
         Assert.assertTrue(text.contains("Вход"));
         assertEquals(enterPage.getUrl(), driver.getCurrentUrl());
     }

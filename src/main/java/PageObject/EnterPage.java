@@ -15,6 +15,7 @@ public class EnterPage {
     private By inputPasswordField = By.xpath("//input[@name='Пароль']");
     private By enterButton = By.xpath("//button[text() = 'Войти']");
 
+    public By enterHeader = By.xpath("//h2");
 
 
 

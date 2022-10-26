@@ -81,7 +81,7 @@ public class RegisterTest {
         registerPage.setEmail(Email);
         registerPage.setPassword(NotCorrectPassword);
         registerPage.clickRegisterButton();
-        String text = driver.findElement(By.xpath("//fieldset[3]/div/p")).getText();
+        String text = driver.findElement(registerPage.errorPassword).getText();
         Assert.assertEquals("Некорректный пароль", text);
     }
 

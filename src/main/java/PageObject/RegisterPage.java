@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegisterPage {
     private WebDriver driver;
-    public final String url = "https://stellarburgers.nomoreparties.site/register";
+    public final String URL = "https://stellarburgers.nomoreparties.site/register";
 
     // локатор заголовка страницы "Регистрация"
     public final By header = By.xpath("//h2[text()='Регистрация']");
@@ -20,7 +20,7 @@ public class RegisterPage {
     // кнопка "Зарегистрироваться"
     public final By buttonReg = By.xpath("//button[text()='Зарегистрироваться']");
     // сообщение об ошибке пароля
-    public final By errorPassword = By.xpath("//p[text()='Некорректный пароль']");
+    public final By errorPassword = By.xpath("//fieldset[3]/div/p");
     // ссылка "Войти" внизу страницы
     public final By linkEnter = By.xpath("//a[text()='Войти']");
     public RegisterPage(WebDriver driver) {
@@ -36,7 +36,7 @@ public class RegisterPage {
                 .until(ExpectedConditions.visibilityOfElementLocated(buttonReg));
     }
     public String getUrl() {
-        return url;
+        return URL;
     }
     public void setName(String Name) {driver.findElement(name).sendKeys(Name);}
     public void setEmail(String Email) {
@@ -53,16 +53,6 @@ public class RegisterPage {
     }
     public void clickNameField() {
         driver.findElement(name).click();
-    }
-
-    public void clearNameField() {
-        driver.findElement(name).clear();
-    }
-    public void clearEmailField() {
-        driver.findElement(email).clear();
-    }
-    public void clearPasswordField() {
-        driver.findElement(password).clear();
     }
 
 }
