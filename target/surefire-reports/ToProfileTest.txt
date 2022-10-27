@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ToProfileTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.715 s - in ToProfileTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.136 s - in ToProfileTest

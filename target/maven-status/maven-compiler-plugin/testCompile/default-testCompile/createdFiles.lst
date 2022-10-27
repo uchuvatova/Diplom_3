@@ -1,5 +1,6 @@
 EnterTest.class
-ConstructTest.class
 FromProfileTest.class
+ConstructTest.class
 RegisterTest.class
 ToProfileTest.class
+Setup.class
